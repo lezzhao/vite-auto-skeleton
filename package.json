@@ -1,0 +1,63 @@
+{
+  "name": "vite-auto-skeleton",
+  "type": "module",
+  "packageManager": "pnpm@8.6.1",
+  "version": "0.0.0",
+  "description": "",
+  "author": "levin",
+  "license": "MIT",
+  "homepage": "https://github.com/lezzhao/vite-auto-skeleton#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lezzhao/vite-auto-skeleton.git"
+  },
+  "keywords": [
+    "vite",
+    "auto skeleton",
+    "plugin"
+  ],
+  "bugs": {
+    "url": "https://github.com/lezzhao/vite-auto-skeleton/issues"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "test": "vitest",
+    "play": "vite playground",
+    "prepublishOnly": "npm run build",
+    "release": "npm publish"
+  },
+  "devDependencies": {
+    "@antfu/ni": "^0.21.3",
+    "@types/node": "^20.2.5",
+    "bumpp": "^9.1.0",
+    "esbuild": "^0.17.19",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.3",
+    "unbuild": "^1.2.1",
+    "vite": "^4.3.9",
+    "vitest": "^0.31.4"
+  }
+}
